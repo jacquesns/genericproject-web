@@ -1,0 +1,21 @@
+<table class="table table-responsive table-bordered">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>User Id</th>
+      <th>Product Id</th>
+      <th>Total Value</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <th scope="row">{{order.id}}</th>
+      <td>{{order.user.id}}</td>
+      <td>{{order.product.id}}</td>
+      <td>{{order.totalValue}}</td>
+      <td>{{order.status}}</td>
+    </tr>
+     
+  </tbody>
+</table>

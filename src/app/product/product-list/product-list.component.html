@@ -1,0 +1,22 @@
+<div class=" col-md-12">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th> Action </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr  *ngFor="let product of products">
+                <th> {{product.id}}</th>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.description.substring(0,50)}}</td>
+                <td> <a href="" (click)="delete(product)"> Delete </a> | <a [routerLink]="['/product/create/'+product.id]"> Edit </a> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
